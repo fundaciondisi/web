@@ -18,7 +18,7 @@
 
 	<head>
 		<meta charset="utf-8"/>
-		<title>ZENI</title>
+		<title>Fundación DISI</title>
 		
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -109,10 +109,7 @@
 		        	
 		        	<!-- Headline -->
 		        	<div id="headline">
-		        		<h1>RESPONSIVE, FREE AND SLEEK</h1>
-		        		<p>Zeni is a FREE Responsive HTML 5 Template.</p>
-		        		<p>Visit my <a href="http://www.luiszuno.com">site</a> for more freebies</p>
-		        		<em id="corner"></em>
+		        		<img src="<?php echo f_ruta();?>img/cab.png">
 		        	</div>
 		        	<!-- ENDS headline -->
 		        	
@@ -125,16 +122,21 @@
 	        	<div class="home-block" >
 	        		<h2 class="home-block-heading"><span>FEATURED POSTS</span></h2>
 	        		<div class="one-third-thumbs clearfix" >
-	        			<figure>
+	        			<a href="single.html"  class="thumb">
+	        				<figure>
+	        				
+	        				<img src="img/dummies/featured-1.jpg" alt="Alt text" />
 		        			<figcaption>
-	        					<strong>Pellentesque habitant morbi</strong>
-	        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-	        					<em>December 08, 2011</em>
-	        					<a href="single.html" class="opener"></a>
+		
+		        					<strong>Pellentesque habitant morbi</strong>
+		        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
+		        					<em>December 08, 2011</em>
+	        				
 			        		</figcaption>
 			        		
-			        		<a href="single.html"  class="thumb"><img src="img/dummies/featured-1.jpg" alt="Alt text" /></a>
-		        		</figure>
+			        		
+		        			</figure>
+		        		</a>
 		        		
 		        		<figure>
 		        			<figcaption>

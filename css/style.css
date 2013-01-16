@@ -377,9 +377,23 @@ nav a{
 	transition: all 0.3s ease;
 }
 
-.home-block figure a:hover img{
+/*.home-block figure a:hover img{
 	opacity: 0.1;
 	line-height: 0em;
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	transform: rotate(5deg);
+
+} */
+
+.home-block a:hover figure {
+
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	transform: rotate(5deg);
+
 }
 
 
@@ -925,7 +939,7 @@ article .meta .user{
 	float: right;
 	width: 260px; /* 300 - 40 padding */
 	min-height: 275px;
-	margin-top: -58px;
+/*	margin-top: -58px;
 	padding: 70px 20px 20px 20px;;
 	
 	-webkit-box-shadow: 2px 2px 0px rgba(0,0,0,.2);
@@ -933,7 +947,7 @@ article .meta .user{
 	-o-box-shadow: 2px 2px 0px rgba(0,0,0,.2);
 	box-shadow: 2px 2px 0px rgba(0,0,0,.2);
 	
-	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.8);
+	text-shadow: 0 1px 0px rgba(255, 255, 255, 0.8); */
 }
 
 #headline h1{ 
