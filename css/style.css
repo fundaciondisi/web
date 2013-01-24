@@ -377,25 +377,10 @@ nav a{
 	transition: all 0.3s ease;
 }
 
-/*.home-block figure a:hover img{
+.home-block figure a:hover img{
 	opacity: 0.1;
 	line-height: 0em;
-	-webkit-transform: rotate(5deg);
-	-moz-transform: rotate(5deg);
-	-o-transform: rotate(5deg);
-	transform: rotate(5deg);
-
-} */
-
-.home-block a:hover figure {
-
-	-webkit-transform: rotate(5deg);
-	-moz-transform: rotate(5deg);
-	-o-transform: rotate(5deg);
-	transform: rotate(5deg);
-
-}
-
+} 
 
 .home-block figure.last{
 	margin-right: 0px;

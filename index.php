@@ -122,77 +122,38 @@
 	        	<div class="home-block" >
 	        		<h2 class="home-block-heading"><span>FEATURED POSTS</span></h2>
 	        		<div class="one-third-thumbs clearfix" >
-	        			<a href="single.html"  class="thumb">
-	        				<figure>
-	        				
-	        				<img src="img/dummies/featured-1.jpg" alt="Alt text" />
+
+	        			<?php 
+		        			if(existe_tabla("cuadrodinamico")==FALSE)
+							{
+								$consulta="create table cuadrodinamico (nombre varchar(100) primary key not null, posicion int(2) not null, texto varchar(20000))";
+								$resultado = mysql_query($consulta,$conexion);
+							}
+						?>
+
+						<?php
+
+							$consulta="select * from cuadrodinamico order by posicion";
+							$resultado=mysql_query($consulta,$conexion);
+							if($resultado):
+
+								$num=mysql_num_rows($resultado);
+								for($k=1;$k<=$num;$k++)
+								{
+									$fila=mysql_fetch_array($resultado); ?>
+
+		        		<figure <?php if(($k%3)==0){echo 'class="last"';}?>>
+
 		        			<figcaption>
-		
-		        					<strong>Pellentesque habitant morbi</strong>
-		        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-		        					<em>December 08, 2011</em>
-	        				
-			        		</figcaption>
-			        		
-			        		
-		        			</figure>
-		        		</a>
-		        		
-		        		<figure>
-		        			<figcaption>
-	        					<strong>Pellentesque habitant morbi</strong>
-	        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-	        					<em>December 08, 2011</em>
-	        					<a href="single.html" class="opener"></a>
+	        					<?php echo $fila['texto']; ?>
 			        		</figcaption>
 			        		
 			        		<a href="single.html"  class="thumb"><img src="img/dummies/featured-2.jpg" alt="Alt text" /></a>
 		        		</figure>
-		        		
-		        		<figure class="last">
-		        			<figcaption>
-	        					<strong>Pellentesque habitant morbi</strong>
-	        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-	        					<em>December 08, 2011</em>
-	        					<a href="single.html" class="opener"></a>
-			        		</figcaption>
-			        		
-			        		<a href="single.html"  class="thumb"><img src="img/dummies/featured-3.jpg" alt="Alt text" /></a>
-		        		</figure>
-		        		
-		        		<figure>
-		        			<figcaption>
-	        					<strong>Pellentesque habitant morbi</strong>
-	        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-	        					<em>December 08, 2011</em>
-	        					<a href="single.html" class="opener"></a>
-			        		</figcaption>
-			        		
-			        		<a href="single.html"  class="thumb"><img src="img/dummies/featured-4.jpg" alt="Alt text" /></a>
-		        		</figure>
-		        		
-		        		<figure>
-		        			<figcaption>
-	        					<strong>Pellentesque habitant morbi</strong>
-	        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-	        					<em>December 08, 2011</em>
-	        					<a href="single.html" class="opener"></a>
-			        		</figcaption>
-			        		
-			        		<a href="single.html"  class="thumb"><img src="img/dummies/featured-5.jpg" alt="Alt text" /></a>
-		        		</figure>
-		        		
-		        		<figure class="last">
-		        			<figcaption>
-	        					<strong>Pellentesque habitant morbi</strong>
-	        					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</span>
-	        					<em>December 08, 2011</em>
-	        					<a href="single.html" class="opener"></a>
-			        		</figcaption>
-			        		
-			        		<a href="single.html"  class="thumb"><img src="img/dummies/featured-6.jpg" alt="Alt text" /></a>
-		        		</figure>
-		        		
+		        			<?php
+		        				}
+		        				endif;
+		        			?>
 		        		
 	        		</div>
 	        	</div>
