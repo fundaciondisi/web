@@ -48,7 +48,7 @@ class misql
     }
 }
 
-include_once(__ROOT__."config_db.php");
+include_once(__ROOT__."config_bd.php");
 
 $misql = new misql () ;
 
